@@ -102,6 +102,7 @@ void SetSpeedLevel(){								//修改默认车速级别		2,3,4,5
 		if(ButtonAdd==0&&ButtonMinus==0){			//如果同时按下按钮增和按钮减
 			delay(200);								//延时
 			if(ButtonAdd==0&&ButtonMinus==1){		//如果长按按钮增和按钮减
+				MaxSpeed=SpeedLevel*2-1;			//定义最大车速级别              3,5,7,9
 				return;								//默认车速级别修改完成 返回main函数
 			}
 		}
