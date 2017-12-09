@@ -23,7 +23,7 @@ void main(){										//主函数
 	while(1){										//死循环
 		if(PowerSwitch==0){							//如果电源开关接通
 			StraightMove();							//直线行进
-			if(ButtonAdd==1&&ButtonMinus==0){		//如果按下 按钮减 ，而且没有按下按钮增
+			if(ButtonAdd==1&&ButtonMinus==0){		//如果按下按钮减 ，而且没有按下按钮增
 				delay(50);							//延时
 				if(ButtonAdd==1&&ButtonMinus==0){	//防抖动
 					SpeedLevel--;
@@ -31,7 +31,7 @@ void main(){										//主函数
 						SpeedLevel=MaxSpeed;		//如果车速降到0，则将车速置为最大车速
 				}
 			}
-			if(ButtonAdd==0&&ButtonMinus==1){		//如果按下 按钮增 ，而且没有按下按钮减
+			if(ButtonAdd==0&&ButtonMinus==1){		//如果按下按钮增 ，而且没有按下按钮减
 				delay(50);							//延时
 				if(ButtonAdd==0&&ButtonMinus==1){	//防抖动
 					SpeedLevel++;
@@ -42,7 +42,7 @@ void main(){										//主函数
 		}
 		else{										//如果电源开关断开
 			StopMove();								//停止行进
-			if(ButtonAdd==1&&ButtonMinus==0){		//如果按钮减
+			if(ButtonAdd==1&&ButtonMinus==0){		//如果按下按钮减
 				delay(2000);						//延时
 				if(ButtonAdd==1&&ButtonMinus==0){	//如果长按按钮减
 					SetDefaultSpeedLevel();			//修改默认车速级别	工程模式
